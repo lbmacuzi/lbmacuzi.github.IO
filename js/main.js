@@ -1,45 +1,36 @@
-
-
-function loadJSON(callback) {   
-
-  var xobj = new XMLHttpRequest();
-      xobj.overrideMimeType("application/json");
-  xobj.open('GET', 'https://adobe-my.sharepoint.com/personal/asghedom_adobe_com/_layouts/15/download.aspx?UniqueId=1bcad287dcb240b782f2f80ffcc8aecf&e=hwbVct', true); // Replace 'my_data' with the path to your file
-  xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-          // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-          callback(xobj.responseText);
+$( document ).ready(function() {
+  console.log( "ready!" );
+  $.ajax({
+    type:"GET",
+    url:"js/test.json",
+    success: function(data) {
+      console.log(data);
+      var rowScript = $("#rowTemplate").html();
+      var mainInfoScript = $("#mainInfo").html();
+    
+      Handlebars.registerHelper('list', function(items, options) {
+        var out = "<tr>"; 
+        for(var i=0, l=items.length; i<l; i++) {
+          out = out + "<td>" + options.fn(items[i]) + "</td>";
         }
-  };
-  xobj.send(null);  
-}
+        return out + "</tr>";
+      });
 
-function init() {
-  loadJSON(function(response) {
-   // Parse JSON string into object
-     var actual_JSON = JSON.parse(response);
-     console.log(actual_JSON);
+      // Compiling the templates
+      var rowTemplate = Handlebars.compile(rowScript);
+      var mainInfoTemplate = Handlebars.compile(mainInfoScript);
+
+      // Pass our data to the template
+      var rowCompiledHtml = rowTemplate(data);
+      var mainInfoCompiledHtml = mainInfoTemplate(data);
+      // Write your code here
+
+
+      // Add the compiled html to the page
+      $(".tableBody").html(rowCompiledHtml);
+      $(".basicInfo").html(mainInfoCompiledHtml);
+    },
+    dataType: 'json',
   });
- }
+});
 
- init();
- 
-
-
-// var ourRequest = new XMLHttpRequest();
-// ourRequest.open('GET', 'test.json');
-// ourRequest.onload = function() {
-//   if (ourRequest.status >= 200 && ourRequest.status < 400) {
-//     // This is where we'll do something with the retrieved data
-//     var data = JSON.parse(ourRequest.responseText);
-//     console.log(data);
-//   } else {
-//     console.log("We connected to the server, but it returned an error.");
-//   }
-// };
-
-// ourRequest.onerror = function() {
-//   console.log("Connection error");
-// };
-
-// ourRequest.send();
