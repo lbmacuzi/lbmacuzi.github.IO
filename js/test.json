@@ -3,9 +3,7 @@
   "ProductVersion": "2018",
   "ProductDescription": "Adobe Premiere Pro CC is a video editor to create professional productions for film, TV and web.",
   "ReportDate": "October 2017",
-  "StandardEvalMethod":	"yes/no",
-  "Nonstandard Evalution": "Desc",
-  "Notes": "The information contained in this report applies to the product itself. Information about product help and support documentation related to 602.3 (Support Docs) for Section 508 as published in 2017 is located at: http://www.adobe.com/accessibility/compliance.html.",
+  "StandardEvalMethod":	"No",
   "Evaluationmethodsused": "Testing Adobe Premiere Pro CC involved extensive use of leading assistive technologies such as screen readers, screen magnifiers, and speech recognition software, as well exclusive use of the keyboard. Native platform accessibility features were also used to assist with testing. These were supplemented with techniques such as manual inspection of Accessibility API output.",
   "WCAGlevelA":	"Yes",
   "WCAGlevelAA":	"Yes",
@@ -14,14 +12,22 @@
   "EN301549":	"Yes",
   "Criteria": [
     {
-      "number": "<p><a href=\"http://www.w3.org/TR/WCAG20/#media-equiv-av-only-alt\"><strong>1.2.1 Audio-only and Video-only (Prerecorded)</strong></a> (Level A)<br> Also applies to:<br> EN 301 549 Criteria</p> <ul style=\"font-weight: normal; font-size: 16px;\"> <li style=\"margin-left: 1.0em;\">9.2.2 (Web)</li><li style=\"margin-left: 1.0em;\">10.2.2 (non-web document)</li></ul> <p>2017 Section 508</p>",
-      "ConformanceSoftware": "Does Not Support",
-      "ConformanceAuthoredContent": "Supports",
+      "number": "1.1.1 Non-text Content (Level A)",
+      "ConformanceSoftware": "Software: Does Not Support</p><p><strong>Authored Content (Video): </strong>Supports</p>",
+      "ConformanceAuthoredContent": "Software: Does Not Support</p><p><strong>Authored Content (Video): </strong>Supports</p>",
       "RemarksSoftware": "DNS",
       "RemarksAuthoredContent": "DNS"
     },
     {
-      "number": "1.1.2 Non-text Content (Level A)",
+       "number": "<p><a href=\"http://www.w3.org/TR/WCAG20/#media-equiv-av-only-alt\"><strong>1.2.1 Audio-only and Video-only (Prerecorded)</strong></a> (Level A)<br> Also applies to:<br> EN 301 549 Criteria</p> <ul style=\"font-weight: normal; font-size: 16px;\"> <li style=\"margin-left: 1.0em;\">9.2.2 (Web)</li><li style=\"margin-left: 1.0em;\">10.2.2 (non-web document)</li></ul> <p>2017 Section 508</p>",
+      "ConformanceSoftware": "Does Not Support",
+      "ConformanceAuthoredContent": "Supports",
+      "RemarksSoftware": "DNS",
+      "RemarksAuthoredContent": "DNS",
+      "ConformanceWeb": "kewjhfkwjbfkbj"
+    },
+    {
+      "number": "1.1.3 Non-text Content (Level A)",
       "ConformanceSoftware": "Software: Does Not Support</p><p><strong>Authored Content (Video): </strong>Supports</p>",
       "ConformanceAuthoredContent": "Software: Does Not Support</p><p><strong>Authored Content (Video): </strong>Supports</p>",
       "RemarksSoftware": "DNS",
@@ -34,5 +40,6 @@
       "RemarksSoftware": "DNS",
       "RemarksAuthoredContent": "DNS"
     }
+
   ]
 }

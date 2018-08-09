@@ -27,7 +27,7 @@
             </ul>
             </section>
       </div>
-      <h1>ACR</h1><br />
+      <h2>Section 1: Success Criteria, Level A</h2><br />
 
       <table class="table table-bordered table-striped" id="employee_table">
         <tr>
@@ -46,6 +46,7 @@
         <td style="border: thin solid #ddd;">{{{number}}}</td>
         <td style="border: thin solid #ddd;">
           <p><strong>Software:</strong> {{ConformanceSoftware}}</p>
+          {{#if ConformanceWeb}}<p>Success</p>{{/if}}
           <p><strong>Authored Content: </strong>{{ConformanceAuthoredContent}}</p>
         </td>
         <td style="border: thin solid #ddd;"><p><strong>Authored Content: </strong>{{RemarksAuthoredContent}}</p>

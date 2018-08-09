@@ -35,3 +35,5 @@ $( document ).ready(function() {
   });
 });
 
+
+// "Notes": "The information contained in this report applies to the product itself. Information about product help and support documentation related to 602.3 (Support Docs) for Section 508 as published in 2017 is located at: http://www.adobe.com/accessibility/compliance.html.",
