@@ -11,9 +11,21 @@
 <body>
 
   <div class="container">
+      <h1>Adobe Accessibility Conformance Report</h1>
     <div class="table-responsive">
-      <div class="basicInfo">
-          
+      <div class="basicInfo">     
+      </div>
+      <div class="termsInfo">
+          <section aria-labelledby="terms" style="margin-bottom: 2.0em;"><h2 id="terms">Terms</h2>
+            <p>The terms used in the Conformance Level information are defined as follows:</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;"><strong>Supports</strong>: The functionality of the product has at least one method that meets the criterion without known defects or meets with equivalent facilitation.</li>
+            <li style="margin-left: 1.0em;"><strong>Supports with Exceptions</strong>: Some functionality of the product does not meet the criterion.</li>
+            <li style="margin-left: 1.0em;"><strong>Does Not Support</strong>: The majority of product functionality does not meet the criterion.</li>
+            <li style="margin-left: 1.0em;"><strong>Not Applicable</strong>: The criterion is not relevant to the product.</li>
+            <li style="margin-left: 1.0em;"><strong>Not Evaluated</strong>: The product has not been evaluated against the criterion. This can be used only in WCAG 2.0 Level AAA.</li>
+            </ul>
+            </section>
       </div>
       <h1>ACR</h1><br />
 
@@ -27,14 +39,21 @@
       </table>
     </div>
   </div>
-  <!-- <tr>
-      <td>{{number}}</td>
-      <td>{{Conformance}}</td>
-      <td>{{Remarks}}</td>
-</tr> -->
 
   <script id="rowTemplate" type="text/handlebars-template">
-    {{#list Criteria}}<b>{{number}} {{Conformance}} {{Remarks}} </b>{{/list}}
+    {{#list Criteria}}
+      <tr>
+        <td style="border: thin solid #ddd;">{{{number}}}</td>
+        <td style="border: thin solid #ddd;">
+          <p><strong>Software:</strong> {{ConformanceSoftware}}</p>
+          <p><strong>Authored Content: </strong>{{ConformanceAuthoredContent}}</p>
+        </td>
+        <td style="border: thin solid #ddd;"><p><strong>Authored Content: </strong>{{RemarksAuthoredContent}}</p>
+        </td>
+      </tr>
+    {{/list}}
+      
+
   </script>
   <script id="mainInfo" type="text/handlebars-template">
       <p>VPAT® Version 2.0 – {{ReportDate}}</p>
@@ -45,6 +64,25 @@
       <p><strong>Contact information:</strong> <a href="mailto:access@adobe.com">access@adobe.com</a></p>
       <p><strong>Notes:</strong> {{Notes}}</p>
       <p><strong>Evaluation Methods Used:</strong> {{Evaluationmethodsused}}</p>
+
+        <section aria-labelledby="asg" style="margin-bottom: 2.0em;"><h2 id="asg">Applicable Standards/Guidelines</h2>
+          <p>This report covers the degree of conformance for the following accessibility standards/guidelines:</p>
+          <table class="data-bordered max TableBorderFull Semantic" style="margin-bottom: 1.5em;" width="95%">
+          <thead><tr class="TableRowVeryDark TextLeft"><th style="border: thin solid #ddd;" scope="col">Standard/Guideline</th>
+          <th style="border: thin solid #ddd;" scope="col" width="20%">Included In Report</th>
+          </tr></thead><tbody><tr><td style="border: thin solid #ddd;"><p>Web Content Accessibility Guidelines 2.0, at <a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/"><em>http://www.w3.org/TR/2008/REC-WCAG20-20081211/</em></a></p>
+          </td>
+          <td style="border: thin solid #ddd;">Level A - {{WCAGlevelA}}<br>
+          Level AA - {{WCAGlevelAA}}<br>
+          Level AAA - {{WCAGlevelAAA}}</td>
+          </tr><tr><td style="border: thin solid #ddd;"><p>Section 508 as published in 2017, at <a href="http://www.section508.gov/"><em>http://www.Section508.gov</em></a></p>
+          </td>
+          <td style="border: thin solid #ddd;">{{508_2017}}</td>
+          </tr><tr><td style="border: thin solid #ddd;"><p>EN 301 549 Accessibility requirements suitable for public procurement of ICT products and services in Europe, at <a href="http://mandate376.standards.eu/standard"><em>http://mandate376.standards.eu/standard</em></a></p>
+          </td>
+          <td style="border: thin solid #ddd;">{{EN301549}}</td>
+          </tr></tbody></table>
+          </section>
   </script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>

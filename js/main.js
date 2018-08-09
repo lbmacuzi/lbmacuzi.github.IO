@@ -9,11 +9,12 @@ $( document ).ready(function() {
       var mainInfoScript = $("#mainInfo").html();
     
       Handlebars.registerHelper('list', function(items, options) {
-        var out = "<tr>"; 
+        var out = ""; 
         for(var i=0, l=items.length; i<l; i++) {
-          out = out + "<td>" + options.fn(items[i]) + "</td>";
+          out = out + options.fn(items[i]);
+          console.log(options.fn(items[i]));
         }
-        return out + "</tr>";
+        return out;
       });
 
       // Compiling the templates
