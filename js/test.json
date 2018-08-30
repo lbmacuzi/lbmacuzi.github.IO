@@ -10,36 +10,20 @@
   "WCAGlevelAAA":	"No",
   "508_2017":	"Yes",
   "EN301549":	"Yes",
-  "Criteria": [
-    {
-      "number": "1.1.1 Non-text Content (Level A)",
-      "ConformanceSoftware": "Software: Does Not Support</p><p><strong>Authored Content (Video): </strong>Supports</p>",
-      "ConformanceAuthoredContent": "Software: Does Not Support</p><p><strong>Authored Content (Video): </strong>Supports</p>",
-      "RemarksSoftware": "DNS",
-      "RemarksAuthoredContent": "DNS"
-    },
-    {
-       "number": "<p><a href=\"http://www.w3.org/TR/WCAG20/#media-equiv-av-only-alt\"><strong>1.2.1 Audio-only and Video-only (Prerecorded)</strong></a> (Level A)<br> Also applies to:<br> EN 301 549 Criteria</p> <ul style=\"font-weight: normal; font-size: 16px;\"> <li style=\"margin-left: 1.0em;\">9.2.2 (Web)</li><li style=\"margin-left: 1.0em;\">10.2.2 (non-web document)</li></ul> <p>2017 Section 508</p>",
-      "ConformanceSoftware": "Does Not Support",
-      "ConformanceAuthoredContent": "Supports",
-      "RemarksSoftware": "DNS",
-      "RemarksAuthoredContent": "DNS",
-      "ConformanceWeb": "kewjhfkwjbfkbj"
-    },
-    {
-      "number": "1.1.3 Non-text Content (Level A)",
-      "ConformanceSoftware": "Software: Does Not Support</p><p><strong>Authored Content (Video): </strong>Supports</p>",
-      "ConformanceAuthoredContent": "Software: Does Not Support</p><p><strong>Authored Content (Video): </strong>Supports</p>",
-      "RemarksSoftware": "DNS",
-      "RemarksAuthoredContent": "DNS"
-    },
-    {
-      "number": "1.1.3 Non-text Content (Level A)",
-      "ConformanceSoftware": "Software: Does Not Support</p><p><strong>Authored Content (Video): </strong>Supports</p>",
-      "ConformanceAuthoredContent": "Software: Does Not Support</p><p><strong>Authored Content (Video): </strong>Supports</p>",
-      "RemarksSoftware": "DNS",
-      "RemarksAuthoredContent": "DNS"
-    }
-
-  ]
+  "wcag111_ConformanceSoftware": "Does Not Support",
+  "wcag111_ConformanceAuthoredContent": "Supports",
+  "wcag111_RemarksSoftware": "",
+  "wcag111_RemarksAuthoredContent": "<p>Authored content does not provide non-text content that requires a text alternative<\/p>",
+  "wcag121_ConformanceSoftware": "Supports",
+  "wcag121_ConformanceAuthoredContent": "Supports",
+  "wcag121_RemarksSoftware": "",
+  "wcag121_RemarksAuthoredContent": "<p>The product allows an author to record an audio description of what would otherwise be video-only media<\/p>",
+  "wcag122_ConformanceSoftware": "Supports",
+  "wcag122_ConformanceAuthoredContent": "Supports",
+  "wcag122_RemarksSoftware": "<p>The product does not provide prerecorded media that requires captions.<\/p>",
+  "wcag122_RemarksAuthoredContent": "<p>Captioning available within authored content depends on the output format – the product exports captions to; .MCC (MacCaption VANC file), .XML (W3C/SMPTE/EBU Timed Text file), and .SRT (SubRip Subtitle file) file formats and provides the capability to embed or burn caption data within Quicktime movie files.</p>",
+  "wcag123_ConformanceSoftware": "Supports",
+  "wcag123_ConformanceAuthoredContent": "Support",
+  "wcag123_RemarksSoftware": "",
+  "wcag123_RemarksAuthoredContent": ""
 }

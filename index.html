@@ -4,59 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+ 
+  
+
+
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
 
   <div class="container">
-      <h1>Adobe Accessibility Conformance Report</h1>
-    <div class="table-responsive">
-      <div class="basicInfo">     
-      </div>
-      <div class="termsInfo">
-          <section aria-labelledby="terms" style="margin-bottom: 2.0em;"><h2 id="terms">Terms</h2>
-            <p>The terms used in the Conformance Level information are defined as follows:</p>
-            <ul style="font-weight: normal; font-size: 16px;">
-            <li style="margin-left: 1.0em;"><strong>Supports</strong>: The functionality of the product has at least one method that meets the criterion without known defects or meets with equivalent facilitation.</li>
-            <li style="margin-left: 1.0em;"><strong>Supports with Exceptions</strong>: Some functionality of the product does not meet the criterion.</li>
-            <li style="margin-left: 1.0em;"><strong>Does Not Support</strong>: The majority of product functionality does not meet the criterion.</li>
-            <li style="margin-left: 1.0em;"><strong>Not Applicable</strong>: The criterion is not relevant to the product.</li>
-            <li style="margin-left: 1.0em;"><strong>Not Evaluated</strong>: The product has not been evaluated against the criterion. This can be used only in WCAG 2.0 Level AAA.</li>
-            </ul>
-            </section>
-      </div>
-      <h2>Section 1: Success Criteria, Level A</h2><br />
-
-      <table class="table table-bordered table-striped" id="employee_table">
-        <tr>
-          <th>Criteria</th>
-          <th>Performance Level</th>
-          <th>Remarks and Explantions</th>
-        </tr>
-        <tbody class="tableBody"></tbody>
-      </table>
-    </div>
+      
   </div>
 
-  <script id="rowTemplate" type="text/handlebars-template">
-    {{#list Criteria}}
-      <tr>
-        <td style="border: thin solid #ddd;">{{{number}}}</td>
-        <td style="border: thin solid #ddd;">
-          <p><strong>Software:</strong> {{ConformanceSoftware}}</p>
-          {{#if ConformanceWeb}}<p>Success</p>{{/if}}
-          <p><strong>Authored Content: </strong>{{ConformanceAuthoredContent}}</p>
-        </td>
-        <td style="border: thin solid #ddd;"><p><strong>Authored Content: </strong>{{RemarksAuthoredContent}}</p>
-        </td>
-      </tr>
-    {{/list}}
-      
-
-  </script>
   <script id="mainInfo" type="text/handlebars-template">
+    <h1>Adobe Accessibility Conformance Report</h1>
       <p>VPAT® Version 2.0 – {{ReportDate}}</p>
       <h2 style="margin: 0.5em 0 0.2em 0;">Product Information</h2>
       <p><strong>Name of Product/Version:</strong> {{ProductName}}</p>
@@ -83,8 +46,193 @@
           </td>
           <td style="border: thin solid #ddd;">{{EN301549}}</td>
           </tr></tbody></table>
+          </section> 
+
+          <section aria-labelledby="terms" style="margin-bottom: 2.0em;"><h2 id="terms">Terms</h2>
+            <p>The terms used in the Conformance Level information are defined as follows:</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;"><strong>Supports</strong>: The functionality of the product has at least one method that meets the criterion without known defects or meets with equivalent facilitation.</li>
+            <li style="margin-left: 1.0em;"><strong>Supports with Exceptions</strong>: Some functionality of the product does not meet the criterion.</li>
+            <li style="margin-left: 1.0em;"><strong>Does Not Support</strong>: The majority of product functionality does not meet the criterion.</li>
+            <li style="margin-left: 1.0em;"><strong>Not Applicable</strong>: The criterion is not relevant to the product.</li>
+            <li style="margin-left: 1.0em;"><strong>Not Evaluated</strong>: The product has not been evaluated against the criterion. This can be used only in WCAG 2.0 Level AAA.</li>
+            </ul>
           </section>
+
+          <section aria-labelledby="WCAG20_report"><h2 id="WCAG20_report">WCAG 2.0 Report</h2>
+            <p>Sections 1 and 2 also document conformance with:</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;">EN 301 549:&nbsp; Chapter 9 - Web, Chapter 10 - Non-Web documents, Section 11.2.1- Non-Web Software (excluding closed functionality), and Section 11.2.2 - Non-Web Software (closed functionality).</li>
+            <li style="margin-left: 1.0em;">Revised Section 508: Chapter 5 – 501.1 Scope, 504.2 Content Creation or Editing, and Chapter 6 – 602.3 Electronic Support Documentation.</li>
+            </ul>
+            <p>Note: When reporting on conformance with the WCAG 2.0 Success Criteria, they are scoped for full pages, complete processes, and accessibility-supported ways of using technology as documented in the <a href="https://www.w3.org/TR/WCAG20/#conformance-reqs">WCAG 2.0 Conformance Requirements</a>.</p>
+            <h3>Section 1: Success Criteria, Level A</h3>
+            <p>Notes:</p>
+            <table class="data-bordered max TableBorderFull Semantic" style="margin-bottom: 1.5em;" width="95%">
+            <caption class="data-sectionHead TableHead LayoutCellSides LayoutRowBottom TextH3 TextLeft" style="margin-bottom: 1.5em;"><div class="text-5-block">Guideline 1.1 Text Alternatives:</div>
+            Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.</caption>
+            <thead><tr class="TableRowVeryDark TextLeft"><th scope="col" style="border: thin solid #ddd;" width="25%">Criteria</th>
+            <th scope="col" style="border: thin solid #ddd;" width="25%">Conformance Level</th>
+            <th scope="col" style="border: thin solid #ddd;">Remarks and Explanations</th>
+            </tr></thead><tbody><tr><td style="border: thin solid #ddd;"><p><a href="http://www.w3.org/TR/WCAG20/#text-equiv-all"><strong>1.1.1 Non-text Content</strong></a> (Level A)<br>
+            Also applies to:<br>
+            EN 301 549 Criteria</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;">9.2.1 (Web)</li>
+            <li style="margin-left: 1.0em;">10.2.1 (non-web document)</li>
+            <li style="margin-left: 1.0em;">11.2.1.1 (Software)</li>
+            <li style="margin-left: 1.0em;">11.2.2.1 (Closed Functionality Software)</li>
+            <li style="margin-left: 1.0em;">11.6.2 (Authoring Tool)</li>
+            <li style="margin-left: 1.0em;">12.1.2 (Product Docs)</li>
+            <li style="margin-left: 1.0em;">12.2.4 (Support Docs)</li>
+            </ul>
+            <p>2017 Section 508</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;">501 (Web)(Software)</li>
+            <li style="margin-left: 1.0em;">504.2 (Authoring Tool)</li>
+            <li style="margin-left: 1.0em;">602.3 (Support Docs)</li>
+            </ul>
+            </td>
+            <td style="border: thin solid #ddd;">
+              {{#if wcag111_ConformanceSoftware}}
+                <p><strong>Software:</strong> {{wcag111_ConformanceSoftware}}</p>
+              {{/if}}
+              {{#if wcag111_ConformanceAuthoredContent}}
+                <p><strong>Authored Content: </strong> {{wcag111_ConformanceAuthoredContent}}</p>
+              {{/if}}
+            </td>
+            <td style="border: thin solid #ddd;">
+              {{#if wcag111_RemarksSoftware}}
+                <p><strong>Software: </strong></p>
+                {{{wcag111_RemarksSoftware}}}
+              {{/if}}
+              {{#if wcag111_RemarksAuthoredContent}}
+                <p><strong>Authored Content: </strong></p>
+                {{{wcag111_RemarksAuthoredContent}}}
+              {{/if}}
+            </td>
+            </tr></tbody></table>
+            <table class="data-bordered max TableBorderFull Semantic" style="margin-bottom: 1.5em;" width="95%">
+            <caption class="data-sectionHead TableHead LayoutCellSides LayoutRowBottom TextH3 TextLeft" style="margin-bottom: 1.5em;"><div class="text-5-block">Guideline 1.2 Time-based Media:</div>
+            Provide alternatives for time-based media.</caption>
+            <thead><tr class="TableRowVeryDark TextLeft"><th scope="col" style="border: thin solid #ddd;" width="25%">Criteria</th>
+            <th scope="col" style="border: thin solid #ddd;" width="25%">Conformance Level</th>
+            <th scope="col" style="border: thin solid #ddd;">Remarks and Explanations</th>
+            </tr></thead><tbody><tr class="TableRowLight"><td style="border: thin solid #ddd;"><p><a href="http://www.w3.org/TR/WCAG20/#media-equiv-av-only-alt"><strong>1.2.1 Audio-only and Video-only (Prerecorded)</strong></a> (Level A)<br>
+            Also applies to:<br>
+            EN 301 549 Criteria</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;">9.2.2 (Web)</li>
+            <li style="margin-left: 1.0em;">10.2.2 (non-web document)</li>
+            <li style="margin-left: 1.0em;">11.2.1.2 (Software)</li>
+            <li style="margin-left: 1.0em;">11.2.2.2.1 and 11.2.2.2.2 (Closed Software)</li>
+            <li style="margin-left: 1.0em;">11.6.2 (Authoring Tool)</li>
+            <li style="margin-left: 1.0em;">12.1.2 (Product Docs)</li>
+            <li style="margin-left: 1.0em;">12.2.4 (Support Docs)</li>
+            </ul>
+            <p>2017 Section 508</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;">501 (Web)(Software)</li>
+            <li style="margin-left: 1.0em;">504.2 (Authoring Tool)</li>
+            <li style="margin-left: 1.0em;">602.3 (Support Docs)</li>
+            </ul>
+            </td>
+              
+            <td style="border: thin solid #ddd;">
+              {{#if wcag121_ConformanceSoftware}}
+                <p><strong>Software:</strong> {{wcag121_ConformanceSoftware}}</p>
+              {{/if}}
+              {{#if wcag121_ConformanceAuthoredContent}}
+                <p><strong>Authored Content (Video):</strong> {{wcag121_ConformanceAuthoredContent}}</p>
+              {{/if}}
+            </td>
+            <td style="border: thin solid #ddd;">
+              {{#if wcag121_RemarksSoftware}}
+                <p><strong>Authored Content (Video):</strong> {{{wcag121_RemarksSoftware}}}</p>
+              {{/if}}
+              {{#if wcag121_RemarksAuthoredContent}}
+                <p><strong>Authored Content (Video):</strong> {{{wcag121_RemarksAuthoredContent}}}</p>
+              {{/if}}
+            </td>
+            </tr><tr><td style="border: thin solid #ddd;"><p><a href="http://www.w3.org/TR/WCAG20/#media-equiv-captions"><strong>1.2.2 Captions (Prerecorded)</strong></a> (Level A)<br>
+            Also applies to:<br>
+            EN 301 549 Criteria</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;">9.2.3 (Web)</li>
+            <li style="margin-left: 1.0em;">10.2.3 (non-web document)</li>
+            <li style="margin-left: 1.0em;">11.2.1.3 (Software)</li>
+            <li style="margin-left: 1.0em;">11.2.2.3 (Closed Software) – Does not apply</li>
+            <li style="margin-left: 1.0em;">11.6.2 (Authoring Tool)</li>
+            <li style="margin-left: 1.0em;">12.1.2 (Product Docs)</li>
+            <li style="margin-left: 1.0em;">12.2.4 (Support Docs)</li>
+            </ul>
+            <p>2017 Section 508</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;">501 (Web)(Software)</li>
+            <li style="margin-left: 1.0em;">504.2 (Authoring Tool)</li>
+            <li style="margin-left: 1.0em;">602.3 (Support Docs)</li>
+            </ul>
+            </td>
+            <td style="border: thin solid #ddd;">
+              {{#if wcag122_ConformanceSoftware}}
+                <p><strong>Software:</strong> {{wcag122_ConformanceSoftware}}</p>
+              {{/if}}
+              {{#if wcag122_ConformanceAuthoredContent}}
+                <p><strong>Authored Content (Video):</strong> {{wcag122_ConformanceAuthoredContent}}</p>
+              {{/if}}
+            </td>
+            <td style="border: thin solid #ddd;">
+              {{#if wcag122_RemarksSoftware}}
+                <p><strong>Software:</strong></p>
+                {{{wcag122_RemarksSoftware}}}
+              {{/if}}
+              {{#if wcag122_RemarksAuthoredContent}}
+                <p><strong>Authored Content (Video):</strong> {{{wcag122_RemarksAuthoredContent}}}</p>
+              {{/if}}
+            </td>
+            </tr><tr><td style="border: thin solid #ddd;"><p><a href="http://www.w3.org/TR/WCAG20/#media-equiv-audio-desc"><strong>1.2.3 Audio Description or Media Alternative (Prerecorded)</strong></a> (Level A)<br>
+            Also applies to:<br>
+            EN 301 549 Criteria</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;">9.2.4 (Web)</li>
+            <li style="margin-left: 1.0em;">10.2.4 (non-web document)</li>
+            <li style="margin-left: 1.0em;">11.2.1.4 (Software)</li>
+            <li style="margin-left: 1.0em;">11.2.2.4 (Closed Software)</li>
+            <li style="margin-left: 1.0em;">11.6.2 (Authoring Tool)</li>
+            <li style="margin-left: 1.0em;">12.1.2 (Product Docs)</li>
+            <li style="margin-left: 1.0em;">12.2.4 (Support Docs)</li>
+            </ul>
+            <p>2017 Section 508</p>
+            <ul style="font-weight: normal; font-size: 16px;">
+            <li style="margin-left: 1.0em;">501 (Web)(Software)</li>
+            <li style="margin-left: 1.0em;">504.2 (Authoring Tool)</li>
+            <li style="margin-left: 1.0em;">602.3 (Support Docs)</li>
+            </ul>
+            </td>
+            <td style="border: thin solid #ddd;">
+              {{#if wcag123_ConformanceSoftware}}
+                <p><strong>Software:</strong> {{wcag123_ConformanceSoftware}}</p>
+              {{/if}}
+              {{#if wcag123_ConformanceAuthoredContent}}
+                <p><strong>Authored Content (Video):</strong> {{wcag123_ConformanceAuthoredContent}}</p>
+              {{/if}}
+            </td>
+            <td style="border: thin solid #ddd;">
+              {{#if wcag123_RemarksSoftware}}
+                <p><strong>Software:</strong> {{{wcag123_RemarksSoftware}}}</p>
+              {{/if}}
+              {{#if wcag123_RemarksAuthoredContent}}
+                <p><strong>Software:</strong> {{{wcag123_RemarksAuthoredContent}}}</p>
+              {{/if}}
+            </td>
+            </tr></tbody></table>
+            </section>
+
+
+
   </script>
+
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
